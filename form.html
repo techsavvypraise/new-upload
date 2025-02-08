@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AltSchool Africa Signup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            color: #333;
+            line-height: 1;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .header-text {
+            font-size: 16px;
+        }
+
+        .sign-in-link {
+            color: #0066FF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: #111;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 20px;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        input, select, textarea {
+            padding: 16px;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            font-size: 16px;
+            color: #6B7280;
+            background-color: #fff;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        input::placeholder, select::placeholder, textarea::placeholder {
+            color: #6B7280;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #0066FF;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), 
+                       0px 0px 0px 3px rgba(0, 102, 255, 0.1);
+        }
+
+        .password-field {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-field input {
+            width: 100%;
+            padding-right: 48px; /* Space for the eye icon */
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            padding: 8px;
+            color: #6B7280;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .password-toggle:focus {
+            outline: none;
+        }
+
+        .password-toggle i {
+            font-size: 20px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .terms {
+            grid-column: 1 / -1;
+            color: #666;
+            font-size: 14px;
+            margin: 24px 0;
+        }
+
+        .terms a {
+            color: #0066FF;
+            text-decoration: none;
+        }
+
+        .signup-button {
+            grid-column: 1 / -1;
+            background-color: #0066FF;
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .signup-button:hover {
+            background-color: #0052CC;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .container {
+                padding: 16px;
+            }
+
+            .form-group label {
+                font-size: 18px;
+            }
+            main{
+                flex-direction: column;
+            }
+            .imgcont{
+                display: none;
+            }
+          .container{
+                width: 100%;
+            }
+        }
+        main{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        main .imgcont{
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFFCF8;
+            align-content: center;
+        }
+        .container2 {
+            text-align: center;
+        }
+        .link {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .link:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="imgcont">
+            <img src="Images/altschool.png" width="100%" alt="">
+        </div>
+    <div class="container">
+    <header class="header">
+        <h1>Signup</h1>
+        <div class="header-text">
+            Already an AltScholar? <a href="#" class="sign-in-link">Sign In!</a>
+        </div>
+    </header>
+
+    <p class="subtitle">Take the next steps to apply at AltSchool Africa</p>
+
+    <form>
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country of Residence</label>
+                <input type="text" id="country" name="country" placeholder="Country of Residence" required>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State of Residence</label>
+                <input type="text" id="state" name="state" placeholder="State of Residence" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-field">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <button type="button" class="password-toggle" onclick="togglePassword('password', this)" aria-label="Toggle password visibility">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="password-field">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                    <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword', this)" aria-label="Toggle confirm password visibility">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="referral">How did you hear about us?</label>
+                <textarea id="referral" name="referral" placeholder="Optional: Let us know how you found us"></textarea>
+            </div>
+
+            <div class="terms">
+                By clicking continue, I agree to <a href="#">Terms of Use</a> and acknowledge that I have read the <a href="#">Privacy Policy</a>.
+            </div>
+
+            <button type="submit" class="signup-button">
+                Signup 
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </form>
+</div>
+
+    </main>
+    <div class="container2">
+        <a href="index.html" class="link">Profile Page</a>
+        <a href="form.html" class="link">Sign Up Form</a>
+    </div>
+    <script>
+        function togglePassword(inputId, icon) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+    </script>
+</body>
+</html>
+
